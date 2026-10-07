@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Clear loading message
       activitiesList.innerHTML = "";
+      Array.from(activitySelect.options).slice(1).forEach((option) => option.remove());
 
       // Populate activities list
       Object.entries(activities).forEach(([name, details]) => {
@@ -157,8 +158,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const result = await response.json();
 
       if (response.ok) {
-        showMessage(result.message, "success");
         signupForm.reset();
+        await fetchActivities();
+        showMessage(result.message, "success");
       } else {
         showMessage(result.detail || "An error occurred", "error");
       }
