@@ -74,6 +74,83 @@ section h3 {
   margin-bottom: 8px;
 }
 
+.participants-section {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-left: 3px solid #16836b;
+  border-radius: 4px;
+  background-color: #edf7f3;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+}
+
+.participants-section h5 {
+  margin-bottom: 7px;
+  color: #17634f;
+  font-size: 0.9rem;
+}
+
+.participants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+  color: #354b44;
+}
+
+.participants-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 6px 5px 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.participant-email {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.remove-participant-button {
+  display: grid;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: #a13d42;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.remove-participant-button:hover {
+  border-color: #f0c6c7;
+  background-color: #fff0f0;
+  color: #8b2028;
+}
+
+.remove-participant-button:focus-visible {
+  outline: 2px solid #17634f;
+  outline-offset: 2px;
+}
+
+.remove-participant-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.participants-empty {
+  color: #61736c;
+  font-size: 0.9rem;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
